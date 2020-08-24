@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginUserFragment">
+
+    <fragment
+        android:id="@+id/loginUserFragment"
+        android:name="com.main.livecode.screens.LoginUserFragment"
+        android:label="fragment_login_user"
+        tools:layout="@layout/fragment_login_user" >
+        <action
+            android:id="@+id/action_loginUserFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.main.livecode.screens.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_input_Recepient_Fragment"
+            app:destination="@id/input_Recepient_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.main.livecode.screens.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/input_Recepient_Fragment"
+        android:name="com.main.livecode.screens.Input_Recepient_Fragment"
+        android:label="fragment_input__recepient_"
+        tools:layout="@layout/fragment_input__recepient_" >
+        <action
+            android:id="@+id/action_input_Recepient_Fragment_to_amountFragment"
+            app:destination="@id/amountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.main.livecode.screens.AmountFragment"
+        android:label="fragment_amount"
+        tools:layout="@layout/fragment_amount" >
+        <action
+            android:id="@+id/action_amountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.main.livecode.screens.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" />
+</navigation>
