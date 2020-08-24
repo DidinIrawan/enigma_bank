@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.main.livecode.R
@@ -36,7 +37,14 @@ class LoginUserFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when(v){
-            submitUser -> {navController.navigate(R.id.action_loginUserFragment_to_homeFragment)}
+            submitUser -> {
+                if (emailInput.text.toString() ==  "Admin" && passwordInput.text.toString() == "admin") {
+                    navController.navigate(R.id.action_loginUserFragment_to_homeFragment)
+                    Toast.makeText(context, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "LOGIN FAILED", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 }
