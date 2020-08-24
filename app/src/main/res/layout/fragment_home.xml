@@ -36,8 +36,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Saldo"
-                android:textSize="30sp" />
+                android:text="$ 300"
+                android:textSize="36sp" />
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
